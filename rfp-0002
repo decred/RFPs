@@ -1,0 +1,22 @@
+==Title==
+Web Wallet Ticket and Stake Pool Support
+
+==Description==
+The Decred Web Wallet is based on BitPay's Copay, and this wallet has no support for handling stake-related transactions.  In order to allow users of the web wallet to participate in the proof-of-stake ("PoS") mining process, support for creating and managing these transactions must be added to the existing code.  To participate in the PoS mining process, users must be able to both purchase tickets, i.e. issue a SSTX transaction, and configure their voting to occur through a stake pool.  These additions would correspond to adding 1 or 2 screens to the existing web UI, along with the corresponding backend code changes.
+
+The UI changes to add ticket purchasing support need to be both consistent with the existing UI and straightforward to merge with future code from BitPay's Copay repository.
+
+This requires 2 separate deliverable sets that may be supplied by separate individuals or groups: (1) the additions to the existing web wallet UI (frontend), and (2) additions to the Copay stack to import the multisig stake pool address and script, create ticket purchase transactions and to relay them to the network via the existing sendrawtransaction rpc.  Proposals may be submitted for deliverable sets (1), (2) or both (1) and (2).
+
+==Requirements==
+UI design (frontend) - Familiarity with HTML, CSS and some Node.js.  Experience with references to prior work.
+
+Copay development (backend) - Familiarity with Node.js.  Experience with references to prior work.
+
+==Scope== 
+In terms of the frontend, the Decred Copay wallet currently has a start page that has 4 buttons along its bottom edge (Home, Receive, Send, History), 1 for each panel.  An additional panel must be added to allow users to purchase stake tickets, or the ability to purchase stake tickets must be added to the existing Send panel.  The ability to add a stake pool must be added to the Preferences menu (on Home panel) for a given wallet.  Adding the stake pool requires entering a multisig address and script (text data) that are supplied by the stake pool.  Users attempting to buy tickets must be prevented from buying tickets until they have entered the address and script from the stake pool.
+
+The backend of Copay will require working with several repositories to add the required features, e.g. insight, insight-api, bitcore-wallet-service (BWS).  The ability to import a multisig address and script from a stake pool will need to be added to ensure stake pools can work properly, and this will likely make use of existing multisig handling in Copay.  Once a user has added a stake pool address and script, they need to be able to create an SSTX transaction.  This SSTX transaction must be relayed from Copay through BWS, Insight and ultimately dcrd. Ultimately the most significant changes will come in BWS where a sstxProposal model will be made along side the existing txProposal model.  Much of the existing infrastructure should allow for sstxProposals to be sent through to insight/dcrd with little effort.
+
+==Estimated Work==
+1 week FTE or greater (1 FTE = 40 hrs/week)
