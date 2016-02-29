@@ -1,5 +1,7 @@
 # RFPs
 
+All submissions or inquiries should be sent to rfp2016 at decred.org.
+
 |Number|Title|Status|
 |---|---|---|
 |[0001](./rfp-0001/rfp-0001.md)|Windows wallet UI/UX overhaul|Draft|
