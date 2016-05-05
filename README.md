@@ -10,3 +10,4 @@ All submissions or inquiries should be sent to rfp2016 at decred.org.
 |[0004](./rfp-0004/rfp-0004.md)|Refactor and update wiki documentation|03/08/2016|Closed|
 |[0005](./rfp-0005/rfp-0005.md)|Mining Protocol Development and Pool Integration|03/04/2016|Closed|
 |[0006](./rfp-0006/rfp-0006.md)|Setup and Operate 10 Stake Pools|Until Filled|Open|
+|[0007](./rfp-0007/rfp-0007.md)|Identity, Alignment, and Design|03/20/2016 06:00 PM UTC|Open|
