@@ -12,3 +12,4 @@ All submissions or inquiries should be sent to rfp2016 at decred.org.
 |[0006](./rfp-0006/rfp-0006.md)|Setup and Operate 10 Stake Pools|Until Filled|Open|
 |[0007](./rfp-0007/rfp-0007.md)|Identity, Alignment, and Design|03/20/2016 06:00 PM UTC|Open|
 |[0008](./rfp-0008/rfp-0008.md)|Higher level language compiling to transaction script|06/01/2016 06:00 PM UTC|Open|
+|[0009](./rfp-0009/rfp-0009.md)|Alternative GUI Implementation|06/16/2016 06:00 PM UTC|Open|
